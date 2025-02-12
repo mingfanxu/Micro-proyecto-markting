@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compuit Experto en marketing digital</title>
+    <style>
+        :root {
+            --primary-blue: #2A5CAA;
+            --accent-purple: #6C63FF;
+            --dark-text: #2C3E50;
+            --light-bg: #F8F9FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', '微软雅黑', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-text);
+        }
+
+        /* 头部样式 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 主要内容容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 服务展示模块 */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 联系表单样式 */
+        .contact-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button.submit-btn {
+            background: var(--accent-purple);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button.submit-btn:hover {
+            background: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Compu IT Soluciones de marketing digital</h1> <!-- 数字营销解决方案 -->
+            <p>Ayudamos a las empresas a lograr el crecimiento digital | Socio certificado oficial de Facebook</p> <!-- 助力企业实现数字化增长 | Facebook官方认证合作伙伴 -->
+            <a href="https://www.facebook.com/compuitmarketingdigital" target="_blank" 
+               style="display: inline-block; margin-top: 2rem; color: white; text-decoration: none;
+                      border: 2px solid white; padding: 0.8rem 2rem; border-radius: 25px;">
+               Visita nuestra página de Facebook
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="services-grid">
+            <div class="service-card">
+                <h3>Marketing en redes sociales</h3> <!-- 社交媒体营销 -->
+                <p>Facebook/Instagram Operación profesional<br>Planificación de contenidos y publicidad<br>Interacción de los fans y análisis de datos</p> <!-- 专业运营  内容策划与广告投放  粉丝互动与数据分析 -->
+            </div>
+            <div class="service-card">
+                <h3>Optimización de motores de búsqueda</h3> <!-- 搜索引擎优化-->
+                <p>Google/Bing Optimización de ranking<br>Desarrollo de estrategia de palabras clave<br>Análisis de tráfico y mejora de la conversión</p> <!-- 关键词策略制定 流量分析与转化提升  -->
+            </div>
+            <div class="service-card">
+                <h3>Marketing de contenidos</h3> <!-- 内容营销 -->
+                <p>Planificación de la historia de la marca<br>Producción de contenido gráfico/video<br>Distribución de contenidos multicanal</p> <!-- 品牌故事策划 视频/图文内容制作 多渠道内容分发  -->
+            </div>
+        </section>
+    </div>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Obtenga una consulta gratuita</h2> <!-- 获取免费咨询 -->
+            <form class="contact-form" id="consultForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre Completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Correo" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Seleccione el tipo de servicio</option> <!-- 选择服务类型 -->
+                        <option>Marketing en redes sociales</option> <!-- 社交媒体营销 -->
+                        <option>Optimización de motores de búsqueda</option> <!-- 搜索引擎优化 -->
+                        <option>Marketing de contenidos</option> <!-- 内容营销 -->
+                        <option>Programa de Marketing Integrado</option> <!-- 整合营销方案 -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Descripción de sus necesidades" required></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="submit-btn">Enviar una solicitud</button> <!-- 提交需求 -->
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // 表单验证与提交处理
+        document.getElementById('consultForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: this.querySelector('input[type="text"]').value.trim(),
+                email: this.querySelector('input[type="email"]').value.trim(),
+                service: this.querySelector('select').value,
+                message: this.querySelector('textarea').value.trim()
+            };
+
+            if (!formData.name || !formData.email || !formData.service || !formData.message) {
+                alert('Por favor, rellene todos los campos obligatorios'); //请填写所有必填字段
+                return;
+            }
+
+            // 模拟提交成功
+            alert(`Gracias por enviar, ${formData.name}！Nos pondremos en contacto con usted en 24 horas.`);
+            this.reset();
+        });
+
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
